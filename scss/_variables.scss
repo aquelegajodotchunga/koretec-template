@@ -1,0 +1,52 @@
+// scss/_variables.scss
+
+// Sobrescrever as variáveis padrão do Bootstrap
+$primary: #007bff; // Um azul vibrante para a Koretec
+$secondary: #6c757d; // Cor secundária padrão
+$success: #28a745;
+$info: #17a2b8;
+$warning: #ffc107;
+$danger: #dc3545;
+$light: #f8f9fa;
+$dark: #343a40;
+
+// Variáveis personalizadas para a Koretec
+$koretec-blue: #0056b3; // Azul mais escuro para acentos
+$koretec-light-gray: #f2f2f2;
+$koretec-text-color: #333;
+$koretec-heading-color: #222;
+
+// Família de Fontes - Usando Google Fonts para um visual moderno
+// Certifique-se de importar a fonte 'Inter' no seu HTML ou CSS final
+$font-family-sans-serif: 'Inter', sans-serif;
+$headings-font-family: 'Inter', sans-serif;
+
+// Espaçamento (customizado para o Bootstrap)
+$spacer: 1rem;
+$spacers: (
+    0: 0,
+    1: $spacer * .25,
+    // 0.25rem
+    2: $spacer * .5,
+    // 0.5rem
+    3: $spacer,
+    // 1rem
+    4: $spacer * 1.5,
+    // 1.5rem
+    5: $spacer * 3,
+    // 3rem
+    6: $spacer * 4,
+    // 4rem (usado para padding maior)
+    7: $spacer * 6,
+    // 6rem (usado para padding maior na hero)
+);
+
+// Raio da Borda (arredondamento)
+$border-radius: .5rem; // Cantos levemente mais arredondados
+$border-radius-lg: .75rem;
+$border-radius-pill: 50rem;
+
+// Sombras
+$box-shadow-sm: 0 .125rem .25rem rgba($dark, .075);
+$box-shadow: 0 .5rem 1rem rgba($dark, .15);
+$box-shadow-lg: 0 1rem 3rem rgba($dark, .175);

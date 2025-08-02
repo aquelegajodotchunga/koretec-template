@@ -1,0 +1,32 @@
+// scss/_base.scss
+
+// Importa as variáveis personalizadas para este arquivo
+@use "variables";
+
+html {
+    scroll-behavior: smooth; // Adiciona rolagem suave para links de âncora
+}
+
+body {
+    font-family: var(--bs-font-sans-serif); // Usa a variável de fonte do Bootstrap
+    color: variables.$koretec-text-color; // Acessando a variável do módulo 'variables'
+    line-height: 1.6;
+    overflow-x: hidden; // Previne rolagem horizontal indesejada
+    padding-top: 72px; // Adiciona padding para compensar a navbar fixa (ajuste se a altura da navbar mudar)
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--bs-font-sans-serif); // Usa a variável de fonte do Bootstrap
+    color: variables.$koretec-heading-color; // Acessando a variável do módulo 'variables'
+    font-weight: 700; // Títulos em negrito
+}
+
+a {
+    color: variables.$primary; // Acessando a variável do módulo 'variables'
+    text-decoration: none;
+    transition: color .3s ease; // Transição suave na cor do link
+
+    &:hover {
+        color: variables.$koretec-blue; // Acessando a variável do módulo 'variables'
+    }
+}

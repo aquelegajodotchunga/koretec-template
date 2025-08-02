@@ -1,0 +1,386 @@
+// scss/_components.scss
+
+// Importa as variáveis personalizadas para este arquivo
+@use "variables";
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+// Nova animação para scroll-triggered
+@keyframes fadeInUpScroll {
+    from {
+        opacity: 0;
+        transform: translateY(50px); // Começa mais abaixo
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+// Estilos Específicos para a Seção Hero
+.hero {
+    // Gradiente sobre uma imagem de fundo para um visual moderno
+    background: linear-gradient(rgba(0, 123, 255, 0.8), rgba(0, 86, 179, 0.8)), url('https://placehold.co/1920x1080/007bff/ffffff?text=Koretec+Background') no-repeat center center;
+    background-size: cover;
+    position: relative;
+    color: white;
+    padding: map-get(variables.$spacers, 7) 0; // Acessando a variável do módulo 'variables'
+    min-height: 70vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    //text-shadow: 0 2px 4px rgba(0, 0, 0, .3); // Sombra sutil no texto
+
+    h1,
+    .lead,
+    .btn {
+        animation: fadeIn 1s ease-out forwards; // Aplica a animação fadeIn
+        opacity: 0; // Garante que os elementos começam invisíveis
+    }
+
+    h1 {
+        color: white;
+        font-size: 3.5rem; // Tamanho maior para desktop
+        animation-delay: 0.2s; // Pequeno atraso para o título
+
+        @media (max-width: 768px) {
+            font-size: 2.5rem; // Tamanho menor para mobile
+        }
+    }
+
+    .lead {
+        font-size: 1.5rem;
+        animation-delay: 0.4s; // Atraso para o lead
+
+        @media (max-width: 768px) {
+            font-size: 1.2rem;
+        }
+    }
+
+    .btn {
+        animation-delay: 0.6s; // Atraso para o botão
+    }
+
+    .btn-light {
+        background-color: white;
+        color: variables.$dark !important; // Acessando a variável do módulo 'variables'
+        border: none;
+        transition: background-color .3s ease, transform .3s ease, box-shadow .3s ease; // Transição para hover
+
+        &:hover {
+            background-color: lighten(white, 5%); // Efeito de clarear ao passar o mouse
+            transform: translateY(-2px) !important; // Efeito de "levantar"
+            box-shadow: variables.$box-shadow-lg; // Acessando a variável do módulo 'variables'
+        }
+    }
+}
+
+// Customizações da Navbar
+.navbar {
+    .navbar-brand {
+        font-size: 1.75rem;
+        color: variables.$koretec-heading-color !important; // Acessando a variável do módulo 'variables'
+
+        img {
+            vertical-align: middle;
+        }
+    }
+
+    .nav-link {
+        font-weight: 500;
+        color: variables.$koretec-text-color !important; // Acessando a variável do módulo 'variables'
+        padding: .5rem 1rem;
+        border-radius: variables.$border-radius; // Acessando a variável do módulo 'variables'
+        transition: background-color .3s ease, color .3s ease;
+
+        &:hover {
+            background-color: rgba(variables.$primary, .1); // Acessando a variável do módulo 'variables'
+            color: variables.$primary !important; // Acessando a variável do módulo 'variables'
+        }
+    }
+
+    .btn-primary {
+        color: variables.$light !important;
+        background-color: variables.$primary; // Acessando a variável do módulo 'variables'
+        border-color: variables.$primary; // Acessando a variável do módulo 'variables'
+        transition: background-color .3s ease, border-color .3s ease, transform .3s ease, box-shadow .3s ease; // Transição para hover
+
+        &:hover {
+            background-color: darken(variables.$primary, 10%); // Acessando a variável do módulo 'variables'
+            border-color: darken(variables.$primary, 10%); // Acessando a variável do módulo 'variables'
+            color: variables.$light !important;
+            transform: translateY(-2px); // Efeito de "levantar"
+            box-shadow: variables.$box-shadow-sm; // Sombra sutil ao passar o mouse
+        }
+    }
+}
+
+// Customizações dos Cards (Seção de Serviços, Testemunhos e Projetos)
+.card {
+    transition: transform .3s ease, box-shadow .3s ease; // Transição suave
+
+    &:hover {
+        transform: translateY(-5px); // Efeito de "levantar" ao passar o mouse
+        box-shadow: variables.$box-shadow-lg !important; // Sombra mais forte ao passar o mouse
+    }
+
+    .card-body {
+        padding: 2rem;
+    }
+
+    .card-title {
+        font-size: 1.35rem;
+    }
+
+    .card-text {
+        font-size: .95rem;
+    }
+}
+
+// Estilos para Títulos de Seção
+section h2 {
+    font-size: 2.8rem;
+    margin-bottom: 1.5rem;
+    position: relative;
+    display: inline-block; // Necessário para o underline
+
+    &::after {
+        content: '';
+        display: block;
+        width: 60px;
+        height: 4px;
+        background-color: variables.$primary;
+        margin: 10px auto 0;
+        border-radius: 2px;
+    }
+}
+
+// Estilos específicos para a secção de Testemunhos
+#testemunhos {
+    .card {
+        background-color: variables.$light; // Fundo ligeiramente diferente para os testemunhos
+        border: 1px solid rgba(variables.$primary, .1); // Borda suave
+
+        .card-text {
+            font-size: 1.1rem; // Texto do testemunho um pouco maior
+            line-height: 1.8;
+        }
+
+        .card-title {
+            color: variables.$koretec-heading-color;
+        }
+
+        i {
+            font-size: 4rem; // Ícones de aspas grandes para testemunhos
+            color: variables.$primary;
+        }
+    }
+}
+
+// Estilos específicos para a secção de Serviços (AGORA COM TAMANHO DE ÍCONE ESPECÍFICO)
+#servicos {
+    .card {
+        i {
+            font-size: 4rem; // Ícones de serviço grandes
+            color: variables.$primary;
+        }
+    }
+}
+
+// Estilos específicos para a secção de Projetos
+#projetos {
+    .card {
+        .card-img-top {
+            border-bottom: 1px solid rgba(variables.$primary, .1); // Borda sutil na parte inferior da imagem
+        }
+
+        .card-title {
+            color: variables.$koretec-heading-color;
+        }
+
+        .btn-outline-primary {
+            border-color: variables.$primary;
+            color: variables.$primary;
+            transition: background-color .3s ease, color .3s ease, transform .3s ease; // Transição para hover
+
+            &:hover {
+                background-color: variables.$primary;
+                color: white;
+                transform: translateY(-2px); // Efeito de "levantar"
+            }
+        }
+    }
+}
+
+// Estilos específicos para o Formulário de Contato
+#contato {
+    .contact-form {
+        border: 1px solid rgba(variables.$primary, .08); // Borda muito suave
+
+        .form-control {
+            border-color: rgba(variables.$primary, .2); // Borda suave para inputs
+
+            &:focus {
+                border-color: variables.$primary; // Borda mais forte ao focar
+                box-shadow: 0 0 0 .25rem rgba(variables.$primary, .25); // Sombra de foco do Bootstrap
+            }
+        }
+
+        textarea.form-control {
+            min-height: 150px; // Altura mínima para a área de texto
+        }
+    }
+}
+
+// Estilos específicos para a secção de Chamada para Ação (CTA)
+#cta {
+    background: linear-gradient(45deg, variables.$primary, darken(variables.$primary, 15%)); // Gradiente de cor
+    // Ou uma imagem de fundo com overlay, similar ao hero:
+    // background: linear-gradient(rgba(0, 123, 255, 0.85), rgba(0, 86, 179, 0.85)), url('https://placehold.co/1920x400/007bff/ffffff?text=CTA+Background') no-repeat center center;
+    background-size: cover;
+    background-attachment: fixed; // Efeito parallax (opcional, mas moderno)
+
+    h2 {
+        color: white; // Garante que o título seja branco
+
+        &::after {
+            background-color: white; // Underline branco
+        }
+    }
+
+    .lead {
+        color: rgba(255, 255, 255, 0.9); // Cor do texto ligeiramente mais clara
+    }
+
+    .btn-light {
+        color: variables.$dark !important; // Garante que o texto do botão seja azul
+    }
+}
+
+// Estilos específicos para o Modal de Newsletter
+.modal-content {
+    border: none;
+
+    .modal-header {
+        .modal-title {
+            color: variables.$koretec-heading-color;
+        }
+    }
+
+    .modal-body {
+        i {
+            color: variables.$primary; // Ícone com a cor primária
+        }
+
+        .lead {
+            font-size: 1rem; // Texto do lead menor no modal
+            color: variables.$koretec-text-color;
+        }
+
+        .form-control {
+            border-color: rgba(variables.$primary, .2);
+
+            &:focus {
+                border-color: variables.$primary;
+                box-shadow: 0 0 0 .25rem rgba(variables.$primary, .25);
+            }
+        }
+
+        .btn-primary {
+            background-color: variables.$primary;
+            border-color: variables.$primary;
+            color: variables.$light;
+            font-weight: bold;
+
+            &:hover {
+                background-color: darken(variables.$primary, 10%);
+                border-color: darken(variables.$primary, 10%);
+            }
+        }
+    }
+
+    .modal-footer {
+        .btn-link {
+            color: variables.$koretec-text-color;
+
+            &:hover {
+                color: variables.$primary;
+                text-decoration: underline;
+            }
+        }
+    }
+}
+
+// Estilos para animações ativadas por scroll
+.fade-in-section {
+    opacity: 0; // Começa invisível
+    transform: translateY(50px); // Começa ligeiramente abaixo da posição final
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out; // Transição suave
+
+    &.is-visible {
+        opacity: 1; // Torna-se visível
+        transform: translateY(0); // Move para a posição final
+    }
+}
+
+// Estilos para o botão "Voltar ao Topo"
+.back-to-top-btn {
+    position: fixed; // Fixo na tela
+    bottom: 25px; // 25px do fundo
+    right: 25px; // 25px da direita
+    width: 50px; // Largura do botão
+    height: 50px; // Altura do botão
+    font-size: 1.5rem; // Tamanho do ícone
+    opacity: 0; // Começa invisível
+    visibility: hidden; // Escondido para leitores de tela quando invisível
+    transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out; // Transição suave
+
+    &.show {
+        opacity: 1; // Torna-se visível
+        visibility: visible; // Visível para leitores de tela
+    }
+
+    &:hover {
+        transform: translateY(-5px); // Efeito de "levantar" no hover
+    }
+}
+
+// Estilos para a secção de logotipos de clientes
+#clientes {
+    .client-logo {
+        filter: grayscale(100%); // Logotipos em escala de cinza para um visual moderno e neutro
+        opacity: 0.7; // Ligeiramente transparente
+        transition: filter 0.3s ease-in-out, opacity 0.3s ease-in-out, transform 0.3s ease-in-out; // Transição suave
+
+        &:hover {
+            filter: grayscale(0%); // Cores originais ao passar o mouse
+            opacity: 1; // Totalmente opaco
+            transform: scale(1.05); // Pequeno zoom no hover
+        }
+    }
+}
+
+// Customizações do Rodapé
+footer {
+    background-color: variables.$dark !important; // Acessando a variável do módulo 'variables'
+
+    p {
+        margin-bottom: 0;
+    }
+
+    .small {
+        font-size: .85rem;
+        color: rgba(255, 255, 255, .6) !important;
+    }
+}

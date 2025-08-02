@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Koretec - Desenvolvimento de Webapps</title>
+    <!-- Link para o CSS do Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Link para ícones (opcional, mas bom para modernidade) -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+
+    <!-- Link para o nosso CSS personalizado (DEPOIS do Bootstrap) -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light shadow-sm fixed-top">
+            <div class="container">
+                <a class="navbar-brand fw-bold" href="#">
+                    <img src="https://placehold.co/30x30/007bff/ffffff?text=K" alt="Koretec Logo" class="me-2 rounded">
+                    Koretec
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Abrir e fechar navegação">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#servicos">Serviços</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#sobre">Sobre Nós</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#testemunhos">Testemunhos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#projetos">Projetos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#clientes">Clientes</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#contato">Contacto</a>
+                        </li>
+                        <li class="nav-item ms-lg-3">
+                            <a class="nav-link btn btn-primary text-white px-4 rounded-pill" href="#">Solicite um
+                                Orçamento</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <div class="hero bg-primary text-white py-5 py-lg-6 d-flex align-items-center justify-content-center"
+            style="min-height: 70vh;">
+            <div class="container text-center">
+                <h1 class="display-4 fw-bold mb-3">Desenvolvimento de Webapps Sob Medida para o seu Negócio</h1>
+                <p class="lead mb-4">Transforme suas ideias em soluções web inovadoras e eficientes.</p>
+                <a href="#" class="btn btn-lg btn-light fw-bold text-primary px-5 py-3 rounded-pill">Saiba
+                    Mais <i class="bi bi-arrow-right ms-2" aria-hidden="true"></i></a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Usamos a tag <main> para envolver todo o conteúdo principal da página para melhor acessibilidade -->
+    <main>
+
+        <section id="servicos" class="py-5 py-lg-6 fade-in-section">
+            <div class="container text-center">
+                <h2 class="display-5 fw-bold mb-4">Nossos Serviços</h2>
+                <p class="lead mb-5">Oferecemos soluções completas em desenvolvimento de webapps.</p>
+                <div class="row g-4">
+                    <div class="col-md-4">
+                        <div class="card h-100 shadow-sm border-0 rounded-4 p-4">
+                            <div class="card-body">
+                                <i class="bi bi-code-slash display-4 text-primary mb-3"></i>
+                                <h3 class="card-title h5 fw-bold mb-2">Desenvolvimento Front-end</h3>
+                                <p class="card-text text-muted">Interfaces de usuário interativas e responsivas com as
+                                    tecnologias mais recentes.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card h-100 shadow-sm border-0 rounded-4 p-4">
+                            <div class="card-body">
+                                <i class="bi bi-server display-4 text-primary mb-3"></i>
+                                <h3 class="card-title h5 fw-bold mb-2">Desenvolvimento Back-end</h3>
+                                <p class="card-text text-muted">Lógica de servidor robusta e escalável para garantir o
+                                    funcionamento da sua aplicação.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card h-100 shadow-sm border-0 rounded-4 p-4">
+                            <div class="card-body">
+                                <i class="bi bi-lightbulb display-4 text-primary mb-3"></i>
+                                <h3 class="card-title h5 fw-bold mb-2">Consultoria e Arquitetura</h3>
+                                <p class="card-text text-muted">Especialistas para ajudar a definir a melhor estratégia
+                                    e
+                                    arquitetura para seu projeto.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="sobre" class="bg-light py-5 py-lg-6 fade-in-section">
+            <div class="container text-center">
+                <h2 class="display-5 fw-bold mb-4">Sobre a Koretec</h2>
+                <p class="lead mb-4">Uma equipe apaixonada por tecnologia e inovação.</p>
+                <p class="text-muted mx-auto" style="max-width: 800px;">Na Koretec, acreditamos no poder da tecnologia
+                    para
+                    transformar negócios. Nossa missão é desenvolver webapps que impulsionem o crescimento e a
+                    eficiência
+                    dos nossos clientes. Trabalhamos com as tecnologias mais modernas e metodologias ágeis para entregar
+                    soluções de alta qualidade, sempre focando na experiência do usuário e na escalabilidade.</p>
+            </div>
+        </section>
+
+        <!-- Nova Secção: Testemunhos -->
+        <section id="testemunhos" class="py-5 py-lg-6 fade-in-section">
+            <div class="container text-center">
+                <h2 class="display-5 fw-bold mb-4">O Que Nossos Clientes Dizem</h2>
+                <p class="lead mb-5">A satisfação dos nossos clientes é a nossa maior recompensa.</p>
+                <div class="row g-4 justify-content-center">
+                    <div class="col-md-6 col-lg-4">
+                        <div class="card h-100 shadow-sm border-0 rounded-4 p-4">
+                            <div class="card-body">
+                                <i class="bi bi-quote display-4 text-primary mb-3"></i>
+                                <p class="card-text text-muted fst-italic">"A Koretec superou as nossas expectativas no
+                                    desenvolvimento do nosso webapp. A equipa é extremamente profissional e entregou um
+                                    produto de alta qualidade dentro do prazo."</p>
+                                <h5 class="card-title mt-3 mb-0 fw-bold">João Silva</h5>
+                                <p class="small text-muted">CEO, Empresa X</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4">
+                        <div class="card h-100 shadow-sm border-0 rounded-4 p-4">
+                            <div class="card-body">
+                                <i class="bi bi-quote display-4 text-primary mb-3"></i>
+                                <p class="card-text text-muted fst-italic">"Desde a consultoria inicial até o
+                                    lançamento, a
+                                    Koretec demonstrou um conhecimento técnico impressionante e um compromisso genuíno
+                                    com o
+                                    nosso sucesso."</p>
+                                <h5 class="card-title mt-3 mb-0 fw-bold">Maria Fernandes</h5>
+                                <p class="small text-muted">Diretora de Marketing, Startup Y</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4">
+                        <div class="card h-100 shadow-sm border-0 rounded-4 p-4">
+                            <div class="card-body">
+                                <i class="bi bi-quote display-4 text-primary mb-3"></i>
+                                <p class="card-text text-muted fst-italic">"O webapp desenvolvido pela Koretec otimizou
+                                    significativamente os nossos processos internos. Recomendo vivamente os seus
+                                    serviços!"
+                                </p>
+                                <h5 class="card-title mt-3 mb-0 fw-bold">Pedro Costa</h5>
+                                <p class="small text-muted">Gerente de Operações, Indústria Z</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Nova Secção: Projetos Recentes -->
+        <section id="projetos" class="bg-light py-5 py-lg-6 fade-in-section">
+            <div class="container text-center">
+                <h2 class="display-5 fw-bold mb-4">Nossos Projetos Recentes</h2>
+                <p class="lead mb-5">Conheça alguns dos webapps que desenvolvemos para os nossos clientes.</p>
+                <div class="row g-4 justify-content-center">
+                    <div class="col-md-6 col-lg-4">
+                        <div class="card h-100 shadow-sm border-0 rounded-4 overflow-hidden">
+                            <img src="https://placehold.co/600x400/007bff/ffffff?text=Projeto+1" class="card-img-top"
+                                alt="Imagem do Projeto 1">
+                            <div class="card-body p-4">
+                                <h3 class="card-title h5 fw-bold mb-2">Plataforma de Gestão de Eventos</h3>
+                                <p class="card-text text-muted">Um sistema completo para organização, inscrição e gestão
+                                    de
+                                    eventos online e presenciais.</p>
+                                <a href="#" class="btn btn-sm btn-outline-primary rounded-pill ps-3 mt-3">Ver Detalhes
+                                    <i class="bi bi-arrow-right-circle ms-1"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4">
+                        <div class="card h-100 shadow-sm border-0 rounded-4 overflow-hidden">
+                            <img src="https://placehold.co/600x400/007bff/ffffff?text=Projeto+2" class="card-img-top"
+                                alt="Imagem do Projeto 2">
+                            <div class="card-body p-4">
+                                <h3 class="card-title h5 fw-bold mb-2">Dashboard Analítico Personalizado</h3>
+                                <p class="card-text text-muted">Interface intuitiva para visualização de dados
+                                    complexos,
+                                    com gráficos interativos e relatórios.</p>
+                                <a href="#" class="btn btn-sm btn-outline-primary rounded-pill ps-3 mt-3">Ver Detalhes
+                                    <i class="bi bi-arrow-right-circle ms-1"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4">
+                        <div class="card h-100 shadow-sm border-0 rounded-4 overflow-hidden">
+                            <img src="https://placehold.co/600x400/007bff/ffffff?text=Projeto+3" class="card-img-top"
+                                alt="Imagem do Projeto 3">
+                            <div class="card-body p-4">
+                                <h3 class="card-title h5 fw-bold mb-2">E-commerce B2B Otimizado</h3>
+                                <p class="card-text text-muted">Solução de comércio eletrónico robusta para transações
+                                    entre
+                                    empresas, com gestão de stock e pedidos.</p>
+                                <a href="#" class="btn btn-sm btn-outline-primary rounded-pill ps-3 mt-3">Ver Detalhes
+                                    <i class="bi bi-arrow-right-circle ms-1"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Nova Secção: Logotipos de Clientes/Parceiros -->
+        <section id="clientes" class="py-5 py-lg-6 fade-in-section">
+            <div class="container text-center">
+                <h2 class="display-5 fw-bold mb-4">Nossos Clientes e Parceiros</h2>
+                <p class="lead mb-5">Temos orgulho de trabalhar com empresas de diversos setores, ajudando-as a alcançar
+                    seus objetivos digitais.</p>
+                <div class="row align-items-center justify-content-center g-4">
+                    <div class="col-6 col-md-4 col-lg-2">
+                        <img src="https://placehold.co/150x80/cccccc/ffffff?text=Logo+1" class="img-fluid client-logo"
+                            alt="Logo Cliente 1">
+                    </div>
+                    <div class="col-6 col-md-4 col-lg-2">
+                        <img src="https://placehold.co/150x80/cccccc/ffffff?text=Logo+2" class="img-fluid client-logo"
+                            alt="Logo Cliente 2">
+                    </div>
+                    <div class="col-6 col-md-4 col-lg-2">
+                        <img src="https://placehold.co/150x80/cccccc/ffffff?text=Logo+3" class="img-fluid client-logo"
+                            alt="Logo Cliente 3">
+                    </div>
+                    <div class="col-6 col-md-4 col-lg-2">
+                        <img src="https://placehold.co/150x80/cccccc/ffffff?text=Logo+4" class="img-fluid client-logo"
+                            alt="Logo Cliente 4">
+                    </div>
+                    <div class="col-6 col-md-4 col-lg-2">
+                        <img src="https://placehold.co/150x80/cccccc/ffffff?text=Logo+5" class="img-fluid client-logo"
+                            alt="Logo Cliente 5">
+                    </div>
+                    <div class="col-6 col-md-4 col-lg-2">
+                        <img src="https://placehold.co/150x80/cccccc/ffffff?text=Logo+6" class="img-fluid client-logo"
+                            alt="Logo Cliente 6">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Secção: Contato (agora com formulário) -->
+        <section id="contato" class="py-5 py-lg-6 bg-light fade-in-section">
+            <div class="container text-center">
+                <h2 class="display-5 fw-bold mb-4">Entre em Contacto</h2>
+                <p class="lead mb-5">Estamos prontos para discutir seu projeto e transformar suas ideias em realidade.
+                </p>
+                <div class="row justify-content-center">
+                    <div class="col-lg-8 col-md-10">
+                        <!-- Adicionado 'novalidate' para desativar a validação padrão do navegador -->
+                        <form id="contactForm" action="#" method="POST"
+                            class="contact-form p-4 p-md-5 shadow-sm rounded-4 bg-white" novalidate>
+                            <div class="mb-3 text-start">
+                                <label for="nome" class="form-label fw-bold">Nome Completo</label>
+                                <input type="text" class="form-control rounded-pill px-3 py-2" id="nome"
+                                    placeholder="O seu nome" required>
+                                <!-- Elemento para exibir mensagem de erro -->
+                                <div class="invalid-feedback">Por favor, insira o seu nome.</div>
+                            </div>
+                            <div class="mb-3 text-start">
+                                <label for="email" class="form-label fw-bold">Endereço de Email</label>
+                                <input type="email" class="form-control rounded-pill px-3 py-2" id="email"
+                                    placeholder="nome@exemplo.com" required>
+                                <div class="invalid-feedback">Por favor, insira um email válido.</div>
+                            </div>
+                            <div class="mb-3 text-start">
+                                <label for="assunto" class="form-label fw-bold">Assunto</label>
+                                <input type="text" class="form-control rounded-pill px-3 py-2" id="assunto"
+                                    placeholder="Assunto da mensagem" required>
+                                <div class="invalid-feedback">Por favor, insira o assunto.</div>
+                            </div>
+                            <div class="mb-4 text-start">
+                                <label for="mensagem" class="form-label fw-bold">Sua Mensagem</label>
+                                <textarea class="form-control rounded-3 px-3 py-2" id="mensagem" rows="5"
+                                    placeholder="Descreva o seu projeto ou questão..." required></textarea>
+                                <div class="invalid-feedback">Por favor, insira a sua mensagem.</div>
+                            </div>
+                            <button type="submit"
+                                class="btn btn-primary text-white btn-lg px-5 py-3 rounded-pill shadow-sm">
+                                <i class="bi bi-send-fill me-2" aria-hidden="true"></i> Enviar Mensagem
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Nova Secção: Chamada para Ação (CTA) -->
+        <section id="cta" class="py-5 py-lg-6 text-white text-center fade-in-section">
+            <div class="container">
+                <h2 class="display-5 fw-bold mb-4">Pronto para Transformar a Sua Ideia em Realidade?</h2>
+                <p class="lead mb-5 mx-auto" style="max-width: 800px;">A Koretec está aqui para o ajudar a construir o
+                    webapp perfeito para o seu negócio. Não perca tempo, dê o primeiro passo hoje!</p>
+                <a href="#contato"
+                    class="btn btn-light btn-lg text-primary fw-bold px-5 py-3 rounded-pill shadow-lg">Solicite um
+                    Orçamento
+                    Gratuito <i class="bi bi-arrow-right ms-2" aria-hidden="true"></i>
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-dark text-white py-4 text-center">
+        <div class="container">
+            <p class="mb-0">&copy; 2025 Koretec. Todos os direitos reservados.</p>
+            <p class="small text-muted mt-2">Desenvolvido com paixão pela tecnologia.</p>
+        </div>
+    </footer>
+
+    <!-- Botão "Voltar ao Topo" -->
+    <a href="#" id="backToTopBtn"
+        class="back-to-top-btn btn btn-primary rounded-circle shadow-lg d-flex align-items-center justify-content-center">
+        <i class="bi bi-arrow-up-short text-white"></i>
+    </a>
+
+    <!-- Modal de Newsletter -->
+    <div class="modal fade" id="newsletterModal" tabindex="-1" aria-labelledby="newsletterModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content rounded-4 shadow-lg p-3">
+                <div class="modal-header border-0 pb-0">
+                    <h5 class="modal-title fw-bold" id="newsletterModalLabel">Subscreva a Nossa Newsletter!</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                </div>
+                <div class="modal-body pt-0 text-center">
+                    <i class="bi bi-envelope-at display-2 text-primary mb-3"></i>
+                    <p class="lead small text-muted">Receba as últimas notícias, insights e ofertas exclusivas da
+                        Koretec diretamente na sua caixa de entrada.</p>
+                    <form class="mt-4">
+                        <div class="mb-3">
+                            <input type="email" class="form-control rounded-pill px-3 py-2" id="newsletterEmail"
+                                placeholder="O seu email" required>
+                        </div>
+                        <button type="submit" class="btn btn-primary rounded-pill px-4 py-2">Subscrever</button>
+                    </form>
+                </div>
+                <div class="modal-footer border-0 pt-0 justify-content-center">
+                    <button type="button" class="btn btn-link text-muted" data-bs-dismiss="modal">Não, obrigado</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Link para o JavaScript do Bootstrap (Bundle com Popper.js) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" defer></script>
+    <!-- Nosso script de validação de formulário -->
+    <script defer>
+        // Aguarda o carregamento completo do DOM
+        document.addEventListener('DOMContentLoaded', function () {
+            // --- Validação do Formulário de Contato ---
+            const contactForm = document.getElementById('contactForm');
+
+            contactForm.addEventListener('submit', function (event) {
+                if (!contactForm.checkValidity()) {
+                    event.preventDefault();
+                    event.stopPropagation();
+                }
+                contactForm.classList.add('was-validated');
+            }, false);
+
+            const formControls = contactForm.querySelectorAll('.form-control');
+            formControls.forEach(control => {
+                control.addEventListener('input', function () {
+                    if (this.checkValidity()) {
+                        this.classList.remove('is-invalid');
+                        this.classList.add('is-valid');
+                    } else {
+                        this.classList.remove('is-valid');
+                        this.classList.add('is-invalid');
+                    }
+                });
+            });
+
+            // --- Controle do Modal de Newsletter ---
+            const newsletterModal = new bootstrap.Modal(document.getElementById('newsletterModal'));
+
+            // Mostra o modal após 5 segundos
+            setTimeout(() => {
+                newsletterModal.show();
+            }, 5000); // 5000 milissegundos = 5 segundos
+
+            // Opcional: Mostrar o modal quando o utilizador tenta sair da página (exit intent)
+            // document.addEventListener('mouseout', function(e) {
+            //     if (e.clientY < 10) { // Se o cursor estiver perto do topo da janela
+            //         newsletterModal.show();
+            //     }
+            // });
+
+            // Lidar com o envio do formulário da newsletter (apenas para demonstração)
+            const newsletterForm = document.querySelector('#newsletterModal form');
+            newsletterForm.addEventListener('submit', function (event) {
+                event.preventDefault(); // Previne o envio padrão do formulário
+                const emailInput = document.getElementById('newsletterEmail');
+                if (emailInput.checkValidity()) {
+                    alert('Obrigado por subscrever! Email: ' + emailInput.value); // Use um modal de sucesso real em produção
+                    newsletterModal.hide(); // Esconde o modal após a subscrição
+                } else {
+                    emailInput.classList.add('is-invalid'); // Mostra feedback de erro
+                }
+            });
+
+            // --- Animações Ativadas por Scroll (Intersection Observer) ---
+            const sections = document.querySelectorAll('.fade-in-section');
+
+            const observerOptions = {
+                root: null, // O viewport como root
+                rootMargin: '0px', // Sem margem extra
+                threshold: 0.1 // A animação dispara quando 10% da secção está visível
+            };
+
+            const observer = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        // Se a secção está visível, adiciona a classe 'is-visible'
+                        entry.target.classList.add('is-visible');
+                        // Para animar apenas uma vez, paramos de observar
+                        observer.unobserve(entry.target);
+                    }
+                    // Não removemos a classe 'is-visible' quando a secção sai do viewport
+                    // para que a animação ocorra apenas uma vez e a secção permaneça visível.
+                });
+            }, observerOptions);
+
+            // Observa cada secção
+            sections.forEach(section => {
+                observer.observe(section);
+            });
+
+            // --- Botão "Voltar ao Topo" ---
+            const backToTopBtn = document.getElementById('backToTopBtn');
+
+            // Mostra/esconde o botão com base na posição de rolagem
+            window.addEventListener('scroll', () => {
+                if (window.scrollY > 300) { // Mostra o botão após rolar 300px
+                    backToTopBtn.classList.add('show');
+                } else {
+                    backToTopBtn.classList.remove('show');
+                }
+            });
+
+            // Rolagem suave ao clicar no botão
+            backToTopBtn.addEventListener('click', (e) => {
+                e.preventDefault(); // Previne o comportamento padrão do link
+                window.scrollTo({
+                    top: 0,
+                    behavior: 'smooth' // Rolagem suave
+                });
+            });
+        });
+    </script>
+</body>
+
+</html>

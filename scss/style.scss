@@ -1,0 +1,32 @@
+// scss/style.scss
+
+// 1. Configurações e variáveis personalizadas
+// Importa nossas variáveis personalizadas primeiro para sobrescrever as do Bootstrap
+@use "variables";
+
+// 2. Importa o Bootstrap usando @use
+// A ordem é importante. As variáveis do Bootstrap são importadas aqui.
+// O "with" permite sobrescrever variáveis do Bootstrap diretamente na importação.
+// Note que as variáveis que você definiu em _variables.scss já sobrescreverão as do Bootstrap
+// porque você as importou antes do Bootstrap.
+@use "../node_modules/bootstrap/scss/bootstrap" with ($primary: variables.$primary,
+    $secondary: variables.$secondary,
+    $light: variables.$light,
+    $dark: variables.$dark,
+    $font-family-sans-serif: variables.$font-family-sans-serif,
+    $headings-font-family: variables.$headings-font-family,
+    $spacer: variables.$spacer,
+    $spacers: variables.$spacers,
+    $border-radius: variables.$border-radius,
+    $border-radius-lg: variables.$border-radius-lg,
+    $border-radius-pill: variables.$border-radius-pill,
+    $box-shadow-sm: variables.$box-shadow-sm,
+    $box-shadow: variables.$box-shadow,
+    $box-shadow-lg: variables.$box-shadow-lg);
+
+
+// 3. Importa nossos estilos base personalizados
+@use "base";
+
+// 4. Importa nossos estilos de componentes personalizados
+@use "components";
